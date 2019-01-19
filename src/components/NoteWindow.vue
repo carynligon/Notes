@@ -1,12 +1,14 @@
 <template>
   <div class="note-window">
-    <NoteList @interface="setCurrentNote" :notes="notes" :setCurrentNote="setCurrentNote" />
+    <NoteList @updateNote="setCurrentNote" :notes="notes" />
     <EditMode :note="currentNote" />
+    <FormattedNote :note="currentNote" />
   </div>
 </template>
 
 <script>
 import EditMode from './EditMode.vue';
+import FormattedNote from './FormattedNote.vue';
 import NoteList from './NoteList.vue';
 
 export default {
@@ -22,6 +24,7 @@ export default {
   },
   components: {
     EditMode,
+    FormattedNote,
     NoteList,
   },
   methods: {

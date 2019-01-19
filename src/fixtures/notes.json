@@ -1,7 +1,7 @@
 [
   {
     "title": "Note 1",
-    "unformatted_body": "# H1 Thing * Bullet point ** Nested bullet point * Anoter bullet point",
+    "unformatted_body": "# H1 Thing <br>- Bullet point <br>-- Nested bullet point <br>- Anoter bullet point",
     "timestamp": "1547314890934"
   },
   {

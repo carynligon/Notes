@@ -16,12 +16,11 @@ export default {
     }
   },
   created() {
-    console.log('edit mode created', this.note);
   },
   watch: {
     note(newNote, old) {
       console.log('note changed in edit mode', newNote, old)
-      this.body = newNote.body;
+      this.body = newNote.unformatted_body;
     }
   }
 };
