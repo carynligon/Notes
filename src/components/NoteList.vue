@@ -1,7 +1,7 @@
 <template>
   <div class="note-list">
     <p>Listy List</p>
-    <NoteThumbnail @interface="setCurrentNote" v-for="note in notes" :note="note" :setCurrentNote="setCurrentNote">{{note.title}}</NoteThumbnail>
+    <NoteThumbnail @updateNote="setCurrentNote" v-for="note in notes" :note="note">{{note.title}}</NoteThumbnail>
   </div>
 </template>
 
@@ -13,13 +13,16 @@ export default {
   props: {
     index: Number,
     notes: Array,
-    setCurrentNote: Function,
   },
   components: {
     NoteThumbnail
   },
+  methods: {
+    setCurrentNote(note) {
+      this.$emit('updateNote', note)
+    }
+  },
   created() {
-    console.log('created', this.setCurrentNote);
   }
 };
 </script>

@@ -9,13 +9,12 @@ export default {
   name: 'NoteThumbnail',
   props: {
     note: Object,
-    setCurrentNote: Function,
   },
   created() {
   },
   methods: {
     setNote() {
-      this.$emit('interface', this.note)
+      this.$emit('updateNote', this.note)
     }
   } 
 };
